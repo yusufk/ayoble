@@ -1,7 +1,8 @@
 {
-  "name": "game",
-  "version": "0.1.0",
+  "name": "ayoble",
+  "version": "0.1.1",
   "private": true,
+  "homepage": "https://yusuf.kaka.co.za/ayoble",
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
@@ -14,14 +15,14 @@
     "@types/react-dom": "^17.0.11",
     "@types/ua-parser-js": "^0.7.36",
     "classnames": "^2.3.1",
+    "grapheme-splitter": "1.0.4",
     "react": "^17.0.2",
     "react-countdown": "^2.3.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "typescript": "^4.5.4",
     "ua-parser-js": "^1.0.2",
-    "web-vitals": "^2.1.3",
-    "grapheme-splitter": "1.0.4"
+    "web-vitals": "^2.1.3"
   },
   "scripts": {
     "build": "react-scripts build",
@@ -29,6 +30,7 @@
     "fix": "prettier --write src",
     "lint": "prettier --check src",
     "start": "react-scripts start",
+    "deploy": "gh-pages -b pages -d build",
     "test": "react-scripts test",
     "prepare": "husky install"
   },
@@ -52,6 +54,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.2",
     "postcss": "^8.4.5",
