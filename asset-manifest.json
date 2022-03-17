@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ayoble/static/css/main.8376a7a5.css",
-    "main.js": "/ayoble/static/js/main.b6c35892.js",
+    "main.css": "/ayoble/static/css/main.fcfc739f.css",
+    "main.js": "/ayoble/static/js/main.86db8baa.js",
     "static/js/787.0e1391bd.chunk.js": "/ayoble/static/js/787.0e1391bd.chunk.js",
     "index.html": "/ayoble/index.html",
-    "main.8376a7a5.css.map": "/ayoble/static/css/main.8376a7a5.css.map",
-    "main.b6c35892.js.map": "/ayoble/static/js/main.b6c35892.js.map",
+    "main.fcfc739f.css.map": "/ayoble/static/css/main.fcfc739f.css.map",
+    "main.86db8baa.js.map": "/ayoble/static/js/main.86db8baa.js.map",
     "787.0e1391bd.chunk.js.map": "/ayoble/static/js/787.0e1391bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8376a7a5.css",
-    "static/js/main.b6c35892.js"
+    "static/css/main.fcfc739f.css",
+    "static/js/main.86db8baa.js"
   ]
 }
