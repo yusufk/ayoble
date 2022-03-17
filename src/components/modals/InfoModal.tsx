@@ -61,6 +61,10 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         This is the ayoba version of the word guessing game we all know and
         love, forked from react-wordle {' '}
       </p>
+
+      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
+        <a href="mailto:yusufk@gmail.com">Contact the developer</a> for any support. {' '}
+      </p>
     </BaseModal>
   )
 }
