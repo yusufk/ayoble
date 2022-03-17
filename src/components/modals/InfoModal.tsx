@@ -59,7 +59,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
         This is the ayoba version of the word guessing game we all know and
-        love, forked from react-wordle -{' '}
+        love, forked from react-wordle {' '}
       </p>
     </BaseModal>
   )
