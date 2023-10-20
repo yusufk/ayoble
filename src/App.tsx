@@ -58,9 +58,7 @@ import {
 function App() {
   const isLatestGame = getIsLatestGame()
   const gameDate = getGameDate()
-  const prefersDarkMode = window.matchMedia(
-    '(prefers-color-scheme: dark)'
-  ).matches
+  const prefersDarkMode = false
 
   const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
     useAlert()
