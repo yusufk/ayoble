@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import Div100vh from 'react-div-100vh'
 
 import { AlertContainer } from './components/alerts/AlertContainer'
+import { Footer } from './components/footer/Footer'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
 import { ContactModal } from './components/modals/ContactModal'
@@ -366,6 +367,7 @@ function App() {
           />
           <AlertContainer />
         </div>
+        <Footer />
       </div>
     </Div100vh>
   )

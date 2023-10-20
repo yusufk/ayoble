@@ -1,4 +1,5 @@
 import { UAParser } from 'ua-parser-js'
+import { getAyoba } from './ayobaInit'
 
 import { MAX_CHALLENGES } from '../constants/settings'
 import { GAME_TITLE } from '../constants/strings'
@@ -9,6 +10,8 @@ const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable']
 const parser = new UAParser()
 const browser = parser.getBrowser()
 const device = parser.getDevice()
+const ayoba = getAyoba()
+
 
 export const shareStatus = (
   solution: string,
@@ -21,8 +24,7 @@ export const shareStatus = (
   handleShareFailure: () => void
 ) => {
   const textToShare =
-    `${GAME_TITLE} ${solutionIndex} ${
-      lost ? 'X' : guesses.length
+    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
     generateEmojiGrid(
       solution,
@@ -35,10 +37,8 @@ export const shareStatus = (
   let shareSuccess = false
 
   try {
-    if (attemptShare(shareData)) {
-      navigator.share(shareData)
-      shareSuccess = true
-    }
+    ayoba.sendMessage(textToShare);
+    shareSuccess = true
   } catch (error) {
     shareSuccess = false
   }

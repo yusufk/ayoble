@@ -79,6 +79,19 @@ svg.cursor-pointer:hover {
   background-color: theme('colors.yellow.400');
 }
 
+.footer {
+  margin-top: 2%;
+}
+
+.footer-content {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  color: theme('colors.ayoba_blue');
+  background-color: theme('colors.yellow.400');
+}
+
 .right-icons {
   display: flex;
 }

@@ -22,7 +22,7 @@ export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_WORD_TEXT = 'New word in'
 export const SHARE_TEXT = 'Share'
 export const SHARE_FAILURE_TEXT =
-  'Unable to share the results. This feature is available only in secure contexts (HTTPS), in some or all supporting browsers.'
+  'Unable to copy the results to your clipboard.'
 export const MIGRATE_BUTTON_TEXT = 'Transfer'
 export const MIGRATE_DESCRIPTION_TEXT =
   'Click here to transfer your statistics to a new device.'
