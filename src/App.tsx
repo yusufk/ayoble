@@ -36,6 +36,7 @@ import {
   WORD_NOT_FOUND_MESSAGE,
 } from './constants/strings'
 import { useAlert } from './context/AlertContext'
+import { getAyoba } from './lib/ayobaInit'
 import { isInAppBrowser } from './lib/browser'
 import {
   getStoredIsHighContrastMode,
@@ -57,6 +58,7 @@ import {
 } from './lib/words'
 
 function App() {
+  const ayoba = getAyoba()
   const isLatestGame = getIsLatestGame()
   const gameDate = getGameDate()
   const prefersDarkMode = false
@@ -367,7 +369,7 @@ function App() {
           />
           <AlertContainer />
         </div>
-        <Footer />
+        <Footer setIsAyoba={ayoba} />
       </div>
     </Div100vh>
   )
