@@ -1,8 +1,10 @@
-import { ReactNode } from 'react'
 import classnames from 'classnames'
-import { CharStatus } from '../../lib/statuses'
-import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../../constants/settings'
+import { ReactNode } from 'react'
+
+import { REVEAL_TIME_MS } from '../../constants/settings'
 import { getStoredIsHighContrastMode } from '../../lib/localStorage'
+import { CharStatus } from '../../lib/statuses'
+import { solution } from '../../lib/words'
 
 type Props = {
   children?: ReactNode
@@ -21,11 +23,11 @@ export const Key = ({
   onClick,
   isRevealing,
 }: Props) => {
-  const keyDelayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
+  const keyDelayMs = REVEAL_TIME_MS * solution.length
   const isHighContrast = getStoredIsHighContrastMode()
 
   const classes = classnames(
-    'flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer select-none dark:text-white',
+    'xxshort:h-8 xxshort:w-8 xxshort:text-xxs xshort:w-10 xshort:h-10 flex short:h-12 h-14 items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer select-none dark:text-white',
     {
       'transition ease-in-out': isRevealing,
       'bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 active:bg-slate-400':
@@ -45,7 +47,6 @@ export const Key = ({
   const styles = {
     transitionDelay: isRevealing ? `${keyDelayMs}ms` : 'unset',
     width: `${width}px`,
-    height: '58px',
   }
 
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
@@ -54,7 +55,12 @@ export const Key = ({
   }
 
   return (
-    <button style={styles} className={classes} onClick={handleClick}>
+    <button
+      style={styles}
+      aria-label={`${value}${status ? ' ' + status : ''}`}
+      className={classes}
+      onClick={handleClick}
+    >
       {children || value}
     </button>
   )
