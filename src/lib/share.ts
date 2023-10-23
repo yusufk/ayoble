@@ -45,6 +45,21 @@ export const shareStatus = (
 
   try {
     if (!shareSuccess) {
+      const el = document.createElement('textarea');
+      el.value = shareData.text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      shareSuccess = true
+    }
+  }
+  catch (error) {
+    shareSuccess = false
+  }
+
+  try {
+    if (!shareSuccess) {
       if (navigator.clipboard) {
         navigator.clipboard
           .writeText(textToShare)
