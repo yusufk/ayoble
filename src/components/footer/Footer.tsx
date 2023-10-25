@@ -1,18 +1,24 @@
-type Props = {
-  setIsAyoba: (value: boolean) => void
-}
+import { AdsList } from '../../constants/ads';
 
-export const Footer = ({
-  setIsAyoba,
-}: Props) => {
+type Props = {
+  setIsAyoba: (value: boolean) => void;
+};
+
+export const Footer = ({ setIsAyoba }: Props) => {
+  const randomAd = AdsList[Math.floor(Math.random() * AdsList.length)];
+  const ad = randomAd.text;
+  const link = randomAd.url;
+
   return (
     <div className="footer">
       <div className="footer-content px-5 short:h-auto">
         <div className="flex">
-          <p><a href="https://www.amazon.com/b?_encoding=UTF8&tag=ayoble-20&linkCode=ur2&linkId=cb5d5a7f0e7a9b481960e11787184ffd&camp=1789&creative=9325&node=283155">Get smarter by reading these great books!</a></p>
+          <p>
+            <a href={link}>{ad}</a>
+          </p>
         </div>
       </div>
-      <hr></hr>
+      <hr />
     </div>
-  )
-}
+  );
+};

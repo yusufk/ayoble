@@ -1,0 +1,6 @@
+export const AdsList = [
+    { text: 'Africa is not a country...', url: 'https://www.amazon.com/Africa-Not-Country-Bright-Continent-ebook/dp/B09TQ3N4RJ?crid=1I3MC8WLZFNQP&keywords=africa&qid=1698169797&s=books&sprefix=afri,stripbooks,312&sr=1-5&linkCode=sl1&tag=ayoble-20&linkId=ba682aa93822b0251bc72c932f402bb1&language=en_US&ref_=as_li_ss_tl' },
+    { text: 'The best of Africa', url: 'https://www.amazon.com/b?_encoding=UTF8&node=283155&linkCode=sl2&tag=ayoble-20&linkId=2befeb4bcc9807b065a00c943007ef84&language=en_US&ref_=as_li_ss_tl' },
+    { text: 'Read "Born a Crime", by Trevor Noah', url: 'https://www.amazon.com/Born-Crime-Stories-African-Childhood-ebook/dp/B01DHWACVY?crid=3H1FFEGCZOWNP&keywords=south+african+authors&qid=1698175887&s=digital-text&sprefix=south+africa,digital-text,395&sr=1-5&linkCode=sl1&tag=ayoble-20&linkId=9a505cdcee76bb3f73cd044a541540a5&language=en_US&ref_=as_li_ss_tl' },
+    { text: 'Listen to "Born a Crime", by Trevor Noah', url: 'https://www.amazon.com/Born-Crime-Trevor-Noah-audiobook/dp/B01IW9TM5O?_encoding=UTF8&qid=1698175887&sr=1-5&linkCode=sl1&tag=ayoble-20&linkId=fac8a79df7886f3bbd015420765333b5&language=en_US&ref_=as_li_ss_tl' }
+];
