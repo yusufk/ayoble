@@ -14,7 +14,7 @@ export const Footer = ({ setIsAyoba }: Props) => {
       <div className="footer-content px-5 short:h-auto">
         <div className="flex">
           <p>
-            <a href={link}>{ad}</a>
+            <a href={link} target="_blank" rel="noopener noreferrer">{ad}</a>
           </p>
         </div>
       </div>

@@ -56,6 +56,7 @@ export const shareStatus = (
   }
   catch (error) {
     shareSuccess = false
+    handleShareFailure()
   }
 
   try {
