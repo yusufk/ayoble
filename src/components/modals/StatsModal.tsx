@@ -142,6 +142,9 @@ export const StatsModal = ({
           <MigrationIntro handleMigrateStatsButton={handleMigrateStatsButton} />
         </div>
       )}
+      <div className="mt-2 inline-flex">
+        <a target="_blank" rel="noreferrer" href={`https://www.amazon.com/gp/search?ie=UTF8&tag=ayoble-20&linkCode=ur2&linkId=12a24bf43e338eba5b5753fe4b166230&camp=1789&creative=9325&index=aps&keywords=${solution}`}>Click here for products relating to {solution}...</a>
+      </div>
     </BaseModal>
   )
 }
