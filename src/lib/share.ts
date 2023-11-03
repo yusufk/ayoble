@@ -37,13 +37,6 @@ export const shareStatus = (
   let shareSuccess = false
 
   try {
-    ayoba.sendMessage(shareData.text);
-    shareSuccess = true
-  } catch (error) {
-    shareSuccess = false
-  }
-
-  try {
     if (!shareSuccess) {
       const el = document.createElement('textarea');
       el.value = shareData.text;
