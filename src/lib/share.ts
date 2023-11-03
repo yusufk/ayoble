@@ -9,8 +9,8 @@ import { solutionIndex, unicodeSplit } from './words'
 /*const webShareApiDeviceTypes: string[] = ['mobile', 'smarttv', 'wearable']
 const parser = new UAParser()
 const browser = parser.getBrowser()
-const device = parser.getDevice()*/
-const ayoba = getAyoba()
+const device = parser.getDevice()
+const ayoba = getAyoba()*/
 
 
 export const shareStatus = (
