@@ -12,8 +12,7 @@ const browser = parser.getBrowser()
 const device = parser.getDevice()
 const ayoba = getAyoba()*/
 
-
-export const shareStatus = (
+export const shareStatus = async (
   solution: string,
   guesses: string[],
   lost: boolean,
@@ -36,8 +35,9 @@ export const shareStatus = (
 
   let shareSuccess = false
 
-  try {
-    if (!shareSuccess) {
+  // Fallback method for copying to clipboard
+  if (!shareSuccess) {
+    try {
       const el = document.createElement('textarea');
       el.value = shareData.text;
       document.body.appendChild(el);
@@ -45,26 +45,23 @@ export const shareStatus = (
       document.execCommand('copy');
       document.body.removeChild(el);
       shareSuccess = true
+      handleShareToClipboard();
+      console.log('Copied to clipboard')
     }
-  }
-  catch (error) {
-    shareSuccess = false
-    handleShareFailure()
+    catch (error) {
+      handleShareFailure()
+      console.error(error)
+    }
   }
 
-  try {
-    if (!shareSuccess) {
-      if (navigator.clipboard) {
-        navigator.clipboard
-          .writeText(textToShare)
-          .then(handleShareToClipboard)
-          .catch(handleShareFailure)
-      } else {
-        handleShareFailure()
-      }
+  // Modern method for copying to clipboard
+  if (!shareSuccess && navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(textToShare);
+      handleShareToClipboard();
+    } catch (error) {
+      handleShareFailure();
     }
-  } catch (error) {
-    handleShareFailure()
   }
 }
 
@@ -93,17 +90,6 @@ export const generateEmojiGrid = (
     })
     .join('\n')
 }
-
-/*const attemptShare = (shareData: object) => {
-  return (
-    // Deliberately exclude Firefox Mobile, because its Web Share API isn't working correctly
-    browser.name?.toUpperCase().indexOf('FIREFOX') === -1 &&
-    webShareApiDeviceTypes.indexOf(device.type ?? '') !== -1 &&
-    navigator.canShare &&
-    navigator.canShare(shareData) &&
-    navigator.share
-  )
-}*/
 
 const getEmojiTiles = (isDarkMode: boolean, isHighContrastMode: boolean) => {
   let tiles: string[] = []

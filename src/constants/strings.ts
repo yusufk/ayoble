@@ -1,7 +1,7 @@
 export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
 
 export const WIN_MESSAGES = ['Ayoba!', 'Awesome', 'Well done!']
-export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
+export const GAME_COPIED_MESSAGE = 'Results copied to clipboard, share away!'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
 export const WORD_NOT_FOUND_MESSAGE = 'Word not found'
 export const HARD_MODE_ALERT_MESSAGE =
@@ -22,7 +22,7 @@ export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_WORD_TEXT = 'New word in'
 export const SHARE_TEXT = 'Share'
 export const SHARE_FAILURE_TEXT =
-  'Unable to copy the results to your clipboard.'
+  'Sorry, error trying to copy the results to your clipboard.'
 export const MIGRATE_BUTTON_TEXT = 'Transfer'
 export const MIGRATE_DESCRIPTION_TEXT =
   'Click here to transfer your statistics to a new device.'
