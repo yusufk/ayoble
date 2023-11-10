@@ -35,6 +35,16 @@ export const shareStatus = async (
 
   let shareSuccess = false
 
+  // Modern method for copying to clipboard
+  if (!shareSuccess && navigator.clipboard) {
+    try {
+      await navigator.clipboard.writeText(textToShare);
+      handleShareToClipboard();
+    } catch (error) {
+      handleShareFailure();
+    }
+  }
+
   // Fallback method for copying to clipboard
   if (!shareSuccess) {
     try {
@@ -51,16 +61,6 @@ export const shareStatus = async (
     catch (error) {
       handleShareFailure()
       console.error(error)
-    }
-  }
-
-  // Modern method for copying to clipboard
-  if (!shareSuccess && navigator.clipboard) {
-    try {
-      await navigator.clipboard.writeText(textToShare);
-      handleShareToClipboard();
-    } catch (error) {
-      handleShareFailure();
     }
   }
 }
